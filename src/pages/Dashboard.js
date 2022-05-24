@@ -1,5 +1,8 @@
+import {Link} from "react-router-dom"
+
 function Dashboard(props) {
-    return <h1>Dashboard</h1>
+    return props.stocks.map((stock) => <Link to={`/stock/${stock.symbol}`}><h3>{stock.name}</h3>
+    </Link>)
 }
 
-export default Dashboard
+export default Dashboard;

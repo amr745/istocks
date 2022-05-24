@@ -1,5 +1,11 @@
+import {Link} from "react-router-dom"
+
 function Header(props) {
-    return <h1>Header</h1>
+    return <nav>
+        <Link to="/">iStock</Link>
+        <Link to="/stocks">Stocks</Link>
+        <Link to="about">About</Link>
+    </nav>
 }
 
-export default Header
+export default Header;

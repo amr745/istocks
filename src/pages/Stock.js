@@ -1,6 +1,7 @@
+import { useParams } from "react-router-dom"
 function Stock(props){
-
-    const symbol = props.match.params.symbol
+    
+    const {symbol} = useParams()
 
     const stock = props.stocks.find((stock) => stock.symbol === symbol)
 
@@ -15,4 +16,4 @@ function Stock(props){
     </div>
 }
 
-export default Stock
+export default Stock;

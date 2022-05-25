@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-// import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/Dashboard";
 import Stock from "../pages/Stock";
 // import About from "../pages/About";
 
@@ -22,10 +22,8 @@ function Main(props) {
             <About />
           </Route> */}
           <Route exact path="/stock/:symbol" render={(rp) => <Stock stocks={stocks} {...rp} />} />
-          {/* <Route exact path="/stocks">
-            <Dashboard stocks={stocks}/>
-          </Route> */}
-        </Routes>
+          <Route exact path="/stocks" element={<Dashboard stocks={stocks}/>}/>
+          </Routes>
     );
 }
 

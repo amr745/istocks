@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Dashboard from "../pages/Dashboard";
 import Stock from "../pages/Stock";
-// import About from "../pages/About";
+import About from "../pages/About";
 
 function Main(props) {
 
@@ -18,12 +18,10 @@ function Main(props) {
       return (
         <Routes>
           <Route path="/" element={<Home/>}/>
-          {/* <Route path="/about">
-            <About />
-          </Route> */}
-          <Route exact path="/stock/:symbol" render={(rp) => <Stock stocks={stocks} {...rp} />} />
-          <Route exact path="/stocks" element={<Dashboard stocks={stocks}/>}/>
-          </Routes>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/stock/:symbol" element={<Stock stocks={stocks} exact/>}/>
+          <Route path="/stocks" element={<Dashboard stocks={stocks}/>}/>
+        </Routes>
     );
 }
 

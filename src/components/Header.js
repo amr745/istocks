@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 
 function Header(props) {
     return <nav>
-        <Link to="/">iStock</Link>
+        <span><Link to="/">iStock</Link></span>
         <Link to="/stocks">Stocks</Link>
         <Link to="about">About</Link>
     </nav>

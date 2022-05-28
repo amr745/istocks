@@ -19,7 +19,7 @@ function Main(props) {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/stock/:symbol" element={<Stock stocks={stocks} />}/>
+          <Route path="/stocks/:symbol" element={<Stock stocks={stocks} />}/>
           <Route path="/stocks" element={<Dashboard stocks={stocks}/>}/>
         </Routes>
     );
